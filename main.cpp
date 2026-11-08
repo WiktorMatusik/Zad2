@@ -62,7 +62,7 @@ int main() {
             cout << "Zamykanie programu.\n";
             break;
         default:
-            cout << "Nieprawidlowa opcja. Sprobuj ponownie.\n";
+            cout << "Nieprawidlowa opcja. Sprobuj ponownie.\n"; //s
         }
     }
 
