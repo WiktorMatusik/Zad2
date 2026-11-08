@@ -33,6 +33,8 @@ public:
     void display(int method) const;
     bool findPath(int target, std::vector<int>& path) const;
     void destroyTree(Node* node) const;
+
+    const std::set<int>& getData() const { return treeData; }
 };
 
 #endif
