@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <set>
+#include <vector>
 
 class BST {
 private:
@@ -29,6 +30,7 @@ public:
     void add(int val);
     void clear();
     void display(int method) const;
+    bool findPath(int target, std::vector<int>& path) const;
     void destroyTree(Node* node) const;
 };
 

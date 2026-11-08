@@ -8,6 +8,7 @@ void printMenu() {
     cout << "1. Dodaj element\n";
     cout << "2. Usun cale drzewo\n";
     cout << "3. Wyswietl drzewo (1-Preorder, 2-Inorder, 3-Postorder, 4-Graficznie)\n";
+    cout << "4. Wyswietl sciezke do elementu\n";
     cout << "0. Wyjscie\n";
     cout << "Wybierz opcje: ";
 }
@@ -39,6 +40,24 @@ int main() {
             tree.display(method);
             break;
         }
+        case 4: {
+            int target;
+            cout << "Wprowadz element do znalezienia: ";
+            cin >> target;
+
+            vector<int> path;
+            if (tree.findPath(target, path)) {
+                cout << "Element znaleziony! Sciezka: ";
+                for (size_t i = 0; i < path.size(); ++i) {
+                    cout << path[i] << (i + 1 < path.size() ? " -> " : "");
+                }
+                cout << "\n";
+            }
+            else {
+                cout << "Element " << target << " nie istnieje w drzewie.\n";
+            }
+            break;
+        } 
         case 0:
             cout << "Zamykanie programu.\n";
             break;
