@@ -13,6 +13,11 @@ void BST::add(int val) {
     treeData.insert(val);
 }
 
+bool BST::removeElement(int val) {
+    return treeData.erase(val) > 0;
+}
+
+
 void BST::destroyTree(Node* node) const{
     if (node) {
         destroyTree(node->left);
