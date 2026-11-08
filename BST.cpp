@@ -13,11 +13,9 @@ void BST::add(int val) {
     treeData.insert(val);
 }
 
-bool BST::removeElement(int val) {
+bool BST::remove(int val) {
     return treeData.erase(val) > 0;
 }
-
-
 void BST::destroyTree(Node* node) const{
     if (node) {
         destroyTree(node->left);
@@ -37,6 +35,42 @@ BST::Node* BST::buildBalancedTree(const int* arr, int start, int end) const {
     node->left = buildBalancedTree(arr, start, mid - 1);
     node->right = buildBalancedTree(arr, mid + 1, end);
     return node;
+}
+
+bool BST::findPath(int target, std::vector<int>& path) const {
+    path.clear();
+    if (treeData.empty()) {
+        return false;
+    }
+
+    vector<int> vec(treeData.begin(), treeData.end());
+    Node* tempRoot = buildBalancedTree(vec.data(), 0, static_cast<int>(vec.size()) - 1);
+
+    Node* current = tempRoot;
+    bool found = false;
+
+    while (current != nullptr) {
+        path.push_back(current->data);
+
+        if (current->data == target) {
+            found = true;
+            break;
+        }
+        else if (target < current->data) {
+            current = current->left;
+        }
+        else {
+            current = current->right;
+        }
+    }
+
+    if (!found) {
+        path.clear();
+    }
+
+    destroyTree(tempRoot);
+
+    return found;
 }
 
 void BST::printPreorder(Node* node) const {
