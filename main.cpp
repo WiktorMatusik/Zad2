@@ -8,6 +8,7 @@ void printMenu() {
     cout << "1. Dodaj element\n";
     cout << "2. Usun cale drzewo\n";
     cout << "3. Wyswietl drzewo (1-Preorder, 2-Inorder, 3-Postorder, 4-Graficznie)\n";
+    cout << "4. Usun Element\n";
     cout << "0. Wyjscie\n";
     cout << "Wybierz opcje: ";
 }
@@ -37,6 +38,14 @@ int main() {
             cout << "Metoda (1: Preorder, 2: Inorder, 3: Postorder, 4: Graficznie): ";
             cin >> method;
             tree.display(method);
+            break;
+        }
+        case 4: {
+            int val;
+            cout << "Podaj wartosc do usuniecia: ";
+            cin >> val;
+            if (tree.removeElement(val)) cout << "Usunieto element " << val << ".\n";
+            else cout << "Element " << val << " nie istnieje w drzewie.\n";
             break;
         }
         case 0:
