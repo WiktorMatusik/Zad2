@@ -3,11 +3,7 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 bool BSTFileManager::saveToBinaryFile(const BST& tree, const string& filename) {
-=======
-bool BSTFileManager::saveToBinary(const BST& tree, const string& filename) {
->>>>>>> 821c108c28b88c8721cedd293089b3367d179472
     ofstream file(filename, ios::binary);
     if (!file.is_open()) return false;
 
@@ -24,11 +20,7 @@ bool BSTFileManager::saveToBinary(const BST& tree, const string& filename) {
     return true;
 }
 
-<<<<<<< HEAD
 bool BSTFileManager::loadFromBinaryFile(BST& tree, const string& filename, bool clearExisting) {
-=======
-bool BSTFileManager::loadFromBinary(BST& tree, const string& filename, bool clearExisting) {
->>>>>>> 821c108c28b88c8721cedd293089b3367d179472
     ifstream file(filename, ios::binary);
     if (!file.is_open()) return false;
 
@@ -49,11 +41,7 @@ bool BSTFileManager::loadFromBinary(BST& tree, const string& filename, bool clea
     return true;
 }
 
-<<<<<<< HEAD
 bool BSTFileManager::loadFromTextFile(BST& tree, const string& filename, bool clearExisting) {
-=======
-bool BSTFileManager::loadFromText(BST& tree, const string& filename, bool clearExisting) {
->>>>>>> 821c108c28b88c8721cedd293089b3367d179472
     ifstream file(filename);
     if (!file.is_open()) return false;
 
