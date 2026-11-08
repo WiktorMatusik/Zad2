@@ -2,20 +2,20 @@
 #define BST_H
 
 #include <iostream>
-
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
-    Node(int val) : data(val), left(nullptr), right(nullptr) {}
-};
+#include <set>
 
 class BST {
 private:
-    Node* root;
+    std::set<int> treeData;
 
-    Node* insert(Node* node, int val);
-    void destroyTree(Node* node);
+    struct Node {
+        int data;
+        Node* left;
+        Node* right;
+        Node(int val) : data(val), left(nullptr), right(nullptr) {}
+    };
+
+    Node* buildBalancedTree(const int* arr, int start, int end) const;
 
     void printPreorder(Node* node) const;
     void printInorder(Node* node) const;
@@ -29,6 +29,7 @@ public:
     void add(int val);
     void clear();
     void display(int method) const;
+    void destroyTree(Node* node) const;
 };
 
 #endif

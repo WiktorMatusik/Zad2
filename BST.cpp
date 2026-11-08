@@ -1,28 +1,19 @@
 #include "BST.h"
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
-BST::BST() : root(nullptr) {}
+BST::BST() {}
 
 BST::~BST() {
     clear();
 }
 
-Node* BST::insert(Node* node, int val) {
-    if (!node) return new Node(val);
-    if (val < node->data)
-        node->left = insert(node->left, val);
-    else if (val > node->data)
-        node->right = insert(node->right, val);
-    return node;
-}
-
 void BST::add(int val) {
-    root = insert(root, val);
+    treeData.insert(val);
 }
 
-void BST::destroyTree(Node* node) {
+void BST::destroyTree(Node* node) const{
     if (node) {
         destroyTree(node->left);
         destroyTree(node->right);
@@ -31,8 +22,16 @@ void BST::destroyTree(Node* node) {
 }
 
 void BST::clear() {
-    destroyTree(root);
-    root = nullptr;
+    treeData.clear();
+}
+
+BST::Node* BST::buildBalancedTree(const int* arr, int start, int end) const {
+    if (start > end) return nullptr;
+    int mid = start + (end - start) / 2;
+    Node* node = new Node(arr[mid]);
+    node->left = buildBalancedTree(arr, start, mid - 1);
+    node->right = buildBalancedTree(arr, mid + 1, end);
+    return node;
 }
 
 void BST::printPreorder(Node* node) const {
@@ -67,15 +66,21 @@ void BST::printGraphical(Node* node, int space) const {
 }
 
 void BST::display(int method) const {
-    if (!root) {
+    if (treeData.empty()) {
         cout << "Drzewo jest puste.\n";
         return;
     }
+
+    vector<int> vec(treeData.begin(), treeData.end());
+    Node* tempRoot = buildBalancedTree(vec.data(), 0, static_cast<int>(vec.size()) - 1);
+
     switch (method) {
-    case 1: cout << "Preorder: "; printPreorder(root); cout << "\n"; break;
-    case 2: cout << "Inorder: "; printInorder(root); cout << "\n"; break;
-    case 3: cout << "Postorder: "; printPostorder(root); cout << "\n"; break;
-    case 4: cout << "Graficznie:\n"; printGraphical(root, 0); cout << "\n"; break;
+    case 1: cout << "Preorder: "; printPreorder(tempRoot); cout << "\n"; break;
+    case 2: cout << "Inorder: "; printInorder(tempRoot); cout << "\n"; break;
+    case 3: cout << "Postorder: "; printPostorder(tempRoot); cout << "\n"; break;
+    case 4: cout << "Graficznie:\n"; printGraphical(tempRoot, 0); cout << "\n"; break;
     default: cout << "Nieznana metoda.\n";
     }
+    destroyTree(tempRoot);
 }
+    
