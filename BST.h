@@ -27,6 +27,7 @@ public:
     ~BST();
 
     void add(int val);
+    bool removeElement(int val);
     void clear();
     void display(int method) const;
     void destroyTree(Node* node) const;
