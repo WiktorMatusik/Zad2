@@ -75,7 +75,11 @@ int main() {
             string filename;
             cout << "Podaj nazwe pliku binarnego (np. drzewo.bin): ";
             cin >> filename;
+<<<<<<< HEAD
             if (BSTFileManager::saveToBinaryFile(tree, filename)) cout << "Zapisano drzewo w formacie binarnym.\n";
+=======
+            if (BSTFileManager::saveToBinary(tree, filename)) cout << "Zapisano drzewo w formacie binarnym.\n";
+>>>>>>> 821c108c28b88c8721cedd293089b3367d179472
             else cout << "Blad zapisu pliku binarnego.\n";
             break;
         }
@@ -86,7 +90,11 @@ int main() {
             cin >> filename;
             cout << "Wczytac do: 1 - Pustego drzewa (czysci obecne), 2 - Istniejacego drzewa (dopisuje): ";
             cin >> mode;
+<<<<<<< HEAD
             if (BSTFileManager::loadFromBinaryFile(tree, filename, mode == 1)) cout << "Wczytano drzewo z pliku binarnego.\n";
+=======
+            if (BSTFileManager::loadFromBinary(tree, filename, mode == 1)) cout << "Wczytano drzewo z pliku binarnego.\n";
+>>>>>>> 821c108c28b88c8721cedd293089b3367d179472
             else cout << "Blad odczytu pliku binarnego.\n";
             break;
         }
@@ -97,10 +105,17 @@ int main() {
             cin >> filename;
             cout << "Wczytac do: 1 - Pustego drzewa (czysci obecne), 2 - Istniejacego drzewa (dopisuje): ";
             cin >> mode;
+<<<<<<< HEAD
             if (BSTFileManager::loadFromTextFile(tree, filename, mode == 1)) cout << "Wczytano liczby z pliku tekstowego do drzewa.\n";
             else cout << "Blad odczytu pliku tekstowego.\n";
             break;
         }
+=======
+            if (BSTFileManager::loadFromText(tree, filename, mode == 1)) cout << "Wczytano liczby z pliku tekstowego do drzewa.\n";
+            else cout << "Blad odczytu pliku tekstowego.\n";
+            break;
+        } 
+>>>>>>> 821c108c28b88c8721cedd293089b3367d179472
         case 0:
             cout << "Zamykanie programu.\n";
             break;
