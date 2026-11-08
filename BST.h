@@ -28,6 +28,7 @@ public:
     ~BST();
 
     void add(int val);
+    bool remove(int val);
     void clear();
     void display(int method) const;
     bool findPath(int target, std::vector<int>& path) const;
