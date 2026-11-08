@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include "BST.h"
+#include "BSTFileManager.h"
 
 using namespace std;
 
@@ -10,6 +11,9 @@ void printMenu() {
     cout << "3. Usun cale drzewo\n";
     cout << "4. Wyswietl drzewo (1-Preorder, 2-Inorder, 3-Postorder, 4-Graficznie)\n";
     cout << "5. Wyswietl sciezke do elementu\n";
+    cout << "6. Zapisz drzewo do pliku binarnego\n";
+    cout << "7. Wczytaj drzewo z pliku binarnego\n";
+    cout << "8. Wczytaj liczby z pliku tekstowego do drzewa\n";
     cout << "0. Wyjscie\n";
     cout << "Wybierz opcje: ";
 }
@@ -67,6 +71,36 @@ int main() {
             }
             break;
         } 
+        case 6: {
+            string filename;
+            cout << "Podaj nazwe pliku binarnego (np. drzewo.bin): ";
+            cin >> filename;
+            if (BSTFileManager::saveToBinaryFile(tree, filename)) cout << "Zapisano drzewo w formacie binarnym.\n";
+            else cout << "Blad zapisu pliku binarnego.\n";
+            break;
+        }
+        case 7: {
+            string filename;
+            int mode;
+            cout << "Podaj nazwe pliku binarnego: ";
+            cin >> filename;
+            cout << "Wczytac do: 1 - Pustego drzewa (czysci obecne), 2 - Istniejacego drzewa (dopisuje): ";
+            cin >> mode;
+            if (BSTFileManager::loadFromBinaryFile(tree, filename, mode == 1)) cout << "Wczytano drzewo z pliku binarnego.\n";
+            else cout << "Blad odczytu pliku binarnego.\n";
+            break;
+        }
+        case 8: {
+            string filename;
+            int mode;
+            cout << "Podaj nazwe pliku tekstowego z liczbami: ";
+            cin >> filename;
+            cout << "Wczytac do: 1 - Pustego drzewa (czysci obecne), 2 - Istniejacego drzewa (dopisuje): ";
+            cin >> mode;
+            if (BSTFileManager::loadFromTextFile(tree, filename, mode == 1)) cout << "Wczytano liczby z pliku tekstowego do drzewa.\n";
+            else cout << "Blad odczytu pliku tekstowego.\n";
+            break;
+        }
         case 0:
             cout << "Zamykanie programu.\n";
             break;
