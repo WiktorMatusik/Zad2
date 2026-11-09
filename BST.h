@@ -5,6 +5,9 @@
 #include <set>
 #include <vector>
 
+/**  * @brief Klasa reprezentująca drzewo poszukiwań binarnych (BST).
+ */
+
 class BST {
 private:
     std::set<int> treeData;

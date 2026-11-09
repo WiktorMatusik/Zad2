@@ -3,6 +3,11 @@
 
 using namespace std;
 
+/**  * @brief Zapisuje drzewo do pliku binarnego.
+ * @param tree Drzewo do zapisania.
+ * @param filename Nazwa pliku.
+ * @return true, jeśli zapis się powiódł, false w przeciwnym razie.
+ */
 bool BSTFileManager::saveToBinaryFile(const BST& tree, const string& filename) {
     ofstream file(filename, ios::binary);
     if (!file.is_open()) return false;
@@ -19,7 +24,12 @@ bool BSTFileManager::saveToBinaryFile(const BST& tree, const string& filename) {
     file.close();
     return true;
 }
-
+/**  * @brief Wczytuje drzewo z pliku binarnego.
+ * @param tree Drzewo do wczytania.
+ * @param filename Nazwa pliku.
+ * @param clearExisting Czy wyczyścić istniejące dane.
+ * @return true, jeśli wczytanie się powiódło, false w przeciwnym razie.
+ */
 bool BSTFileManager::loadFromBinaryFile(BST& tree, const string& filename, bool clearExisting) {
     ifstream file(filename, ios::binary);
     if (!file.is_open()) return false;
@@ -41,6 +51,12 @@ bool BSTFileManager::loadFromBinaryFile(BST& tree, const string& filename, bool 
     return true;
 }
 
+/**  * @brief Wczytuje drzewo z pliku tekstowego.
+ * @param tree Drzewo do wczytania.
+ * @param filename Nazwa pliku.
+ * @param clearExisting Czy wyczyścić istniejące dane.
+ * @return true, jeśli wczytanie się powiódło, false w przeciwnym razie.
+ */
 bool BSTFileManager::loadFromTextFile(BST& tree, const string& filename, bool clearExisting) {
     ifstream file(filename);
     if (!file.is_open()) return false;

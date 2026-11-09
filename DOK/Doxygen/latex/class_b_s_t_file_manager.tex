@@ -1,0 +1,103 @@
+\doxysection{BSTFile\+Manager Class Reference}
+\hypertarget{class_b_s_t_file_manager}{}\label{class_b_s_t_file_manager}\index{BSTFileManager@{BSTFileManager}}
+
+
+Klasa odpowiedzialna za zarządzanie plikami dla drzewa \doxylink{class_b_s_t}{BST}.  
+
+
+
+
+{\ttfamily \+\#include $<$BSTFile\+Manager.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \doxymbox{\hyperlink{class_b_s_t_file_manager_a0fef3d2afcae067a4145edbb1991d2e4}{save\+To\+Binary\+File}} (const \doxymbox{\hyperlink{class_b_s_t}{BST}} \&tree, const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Zapisuje drzewo do pliku binarnego. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{class_b_s_t_file_manager_a8a451def7d433dc471cc2db37ee2866b}{load\+From\+Binary\+File}} (\doxymbox{\hyperlink{class_b_s_t}{BST}} \&tree, const std::\+string \&filename, bool clear\+Existing=false)
+\begin{DoxyCompactList}\small\item\em Wczytuje drzewo z pliku binarnego. \end{DoxyCompactList}\item 
+static bool \doxymbox{\hyperlink{class_b_s_t_file_manager_ade838331b110d418899eeb3f876b6660}{load\+From\+Text\+File}} (\doxymbox{\hyperlink{class_b_s_t}{BST}} \&tree, const std::\+string \&filename, bool clear\+Existing=false)
+\begin{DoxyCompactList}\small\item\em Wczytuje drzewo z pliku tekstowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za zarządzanie plikami dla drzewa \doxylink{class_b_s_t}{BST}. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\label{class_b_s_t_file_manager_doc-func-members}
+\Hypertarget{class_b_s_t_file_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_s_t_file_manager_a8a451def7d433dc471cc2db37ee2866b}\index{BSTFileManager@{BSTFileManager}!loadFromBinaryFile@{loadFromBinaryFile}}
+\index{loadFromBinaryFile@{loadFromBinaryFile}!BSTFileManager@{BSTFileManager}}
+\doxysubsubsection{\texorpdfstring{loadFromBinaryFile()}{loadFromBinaryFile()}}
+{\footnotesize\ttfamily \label{class_b_s_t_file_manager_a8a451def7d433dc471cc2db37ee2866b} 
+bool BSTFile\+Manager::\+load\+From\+Binary\+File (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_b_s_t}{BST}} \&}]{tree}{, }\item[{const std::\+string \&}]{filename}{, }\item[{bool}]{clear\+Existing}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wczytuje drzewo z pliku binarnego. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em tree} & Drzewo do wczytania. \\
+\hline
+{\em filename} & Nazwa pliku. \\
+\hline
+{\em clear\+Existing} & Czy wyczyścić istniejące dane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli wczytanie się powiódło, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_file_manager_ade838331b110d418899eeb3f876b6660}\index{BSTFileManager@{BSTFileManager}!loadFromTextFile@{loadFromTextFile}}
+\index{loadFromTextFile@{loadFromTextFile}!BSTFileManager@{BSTFileManager}}
+\doxysubsubsection{\texorpdfstring{loadFromTextFile()}{loadFromTextFile()}}
+{\footnotesize\ttfamily \label{class_b_s_t_file_manager_ade838331b110d418899eeb3f876b6660} 
+bool BSTFile\+Manager::\+load\+From\+Text\+File (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_b_s_t}{BST}} \&}]{tree}{, }\item[{const std::\+string \&}]{filename}{, }\item[{bool}]{clear\+Existing}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wczytuje drzewo z pliku tekstowego. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em tree} & Drzewo do wczytania. \\
+\hline
+{\em filename} & Nazwa pliku. \\
+\hline
+{\em clear\+Existing} & Czy wyczyścić istniejące dane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli wczytanie się powiódło, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_file_manager_a0fef3d2afcae067a4145edbb1991d2e4}\index{BSTFileManager@{BSTFileManager}!saveToBinaryFile@{saveToBinaryFile}}
+\index{saveToBinaryFile@{saveToBinaryFile}!BSTFileManager@{BSTFileManager}}
+\doxysubsubsection{\texorpdfstring{saveToBinaryFile()}{saveToBinaryFile()}}
+{\footnotesize\ttfamily \label{class_b_s_t_file_manager_a0fef3d2afcae067a4145edbb1991d2e4} 
+bool BSTFile\+Manager::\+save\+To\+Binary\+File (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_b_s_t}{BST}} \&}]{tree}{, }\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zapisuje drzewo do pliku binarnego. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em tree} & Drzewo do zapisania. \\
+\hline
+{\em filename} & Nazwa pliku. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli zapis się powiódł, false w przeciwnym razie. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BSTFile\+Manager.\+h\item 
+BSTFile\+Manager.\+cpp\end{DoxyCompactItemize}

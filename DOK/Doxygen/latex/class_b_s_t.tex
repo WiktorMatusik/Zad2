@@ -1,0 +1,144 @@
+\doxysection{BST Class Reference}
+\hypertarget{class_b_s_t}{}\label{class_b_s_t}\index{BST@{BST}}
+
+
+Klasa reprezentująca drzewo poszukiwań binarnych (\doxylink{class_b_s_t}{BST}).  
+
+
+
+
+{\ttfamily \+\#include $<$BST.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}{add}} (int val)
+\begin{DoxyCompactList}\small\item\em Dodaje wartość do drzewa. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_b_s_t_aefc696db4ac313445e484b815c59cd42}{remove}} (int val)
+\begin{DoxyCompactList}\small\item\em Usuwa wartość z drzewa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Czyści drzewo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_aa131064b9b8165893fe655d3fcecf075}{display}} (int method) const
+\begin{DoxyCompactList}\small\item\em Wyświetla drzewo w zależności od wybranej metody. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_b_s_t_a4d81ad6255a266137ebb36ae3af7431f}{find\+Path}} (int target, std::\+vector$<$ int $>$ \&path) const
+\begin{DoxyCompactList}\small\item\em znajduje ścieżkę do wartości w drzewie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_ab3f23c9fc94f151bfc1473900f8a744b}{destroy\+Tree}} (Node \texorpdfstring{$\ast$}{*}node) const
+\begin{DoxyCompactList}\small\item\em Niszczy drzewo. \end{DoxyCompactList}\item 
+\Hypertarget{class_b_s_t_ad3cf489c0eaed88e808f0a8aae9e242c}\label{class_b_s_t_ad3cf489c0eaed88e808f0a8aae9e242c} 
+const std::\+set$<$ int $>$ \& {\bfseries get\+Data} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca drzewo poszukiwań binarnych (\doxylink{class_b_s_t}{BST}). 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\label{class_b_s_t_doc-func-members}
+\Hypertarget{class_b_s_t_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}\index{BST@{BST}!add@{add}}
+\index{add@{add}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95} 
+void BST::\+add (\begin{DoxyParamCaption}\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje wartość do drzewa. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em val} & Wartość do dodania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}\index{BST@{BST}!clear@{clear}}
+\index{clear@{clear}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ac4c25c29469df59a243c920423ed6d75} 
+void BST::\+clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Czyści drzewo. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\Hypertarget{class_b_s_t_ab3f23c9fc94f151bfc1473900f8a744b}\index{BST@{BST}!destroyTree@{destroyTree}}
+\index{destroyTree@{destroyTree}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{destroyTree()}{destroyTree()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ab3f23c9fc94f151bfc1473900f8a744b} 
+void BST::\+destroy\+Tree (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption}) const}
+
+
+
+Niszczy drzewo. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em node} & Wskaźnik do korzenia drzewa. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_aa131064b9b8165893fe655d3fcecf075}\index{BST@{BST}!display@{display}}
+\index{display@{display}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_b_s_t_aa131064b9b8165893fe655d3fcecf075} 
+void BST::\+display (\begin{DoxyParamCaption}\item[{int}]{method}{}\end{DoxyParamCaption}) const}
+
+
+
+Wyświetla drzewo w zależności od wybranej metody. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em method} & Metoda wyświetlania (1 -\/ preorder, 2 -\/ inorder, 3 -\/ postorder, 4 -\/ graficznie). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a4d81ad6255a266137ebb36ae3af7431f}\index{BST@{BST}!findPath@{findPath}}
+\index{findPath@{findPath}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{findPath()}{findPath()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a4d81ad6255a266137ebb36ae3af7431f} 
+bool BST::\+find\+Path (\begin{DoxyParamCaption}\item[{int}]{target}{, }\item[{std::\+vector$<$ int $>$ \&}]{path}{}\end{DoxyParamCaption}) const}
+
+
+
+znajduje ścieżkę do wartości w drzewie. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em target} & Wartość, dla której szukamy ścieżki. \\
+\hline
+{\em path} & Wektor do przechowywania ścieżki. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli ścieżka została znaleziona, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_aefc696db4ac313445e484b815c59cd42}\index{BST@{BST}!remove@{remove}}
+\index{remove@{remove}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_b_s_t_aefc696db4ac313445e484b815c59cd42} 
+bool BST::\+remove (\begin{DoxyParamCaption}\item[{int}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Usuwa wartość z drzewa. 
+
+\texorpdfstring{$\ast$}{*}
+\begin{DoxyParams}{Parameters}
+{\em val} & Wartość do usunięcia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli wartość została usunięta, false w przeciwnym razie. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BST.\+h\item 
+BST.\+cpp\end{DoxyCompactItemize}

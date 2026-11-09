@@ -4,6 +4,8 @@
 
 using namespace std;
 
+/**  * @brief Wyświetla menu programu.
+ */
 void printMenu() {
     cout << "\n==== MENU DRZEWA BST ====\n";
     cout << "1. Dodaj element\n";
@@ -17,7 +19,9 @@ void printMenu() {
     cout << "0. Wyjscie\n";
     cout << "Wybierz opcje: ";
 }
-
+/**  * @brief Funkcja główna programu.
+ * @return Kod zakończenia.
+ */
 int main() {
     BST tree;
     int choice = -1;

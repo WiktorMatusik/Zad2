@@ -1,0 +1,54 @@
+\begin{theindex}
+
+  \item {add}
+    \subitem {BST}, \hyperpage{6}
+
+  \indexspace
+
+  \item {BST}, \hyperpage{5}
+    \subitem {add}, \hyperpage{6}
+    \subitem {clear}, \hyperpage{6}
+    \subitem {destroyTree}, \hyperpage{6}
+    \subitem {display}, \hyperpage{6}
+    \subitem {findPath}, \hyperpage{7}
+    \subitem {remove}, \hyperpage{7}
+  \item {BSTFileManager}, \hyperpage{8}
+    \subitem {loadFromBinaryFile}, \hyperpage{8}
+    \subitem {loadFromTextFile}, \hyperpage{8}
+    \subitem {saveToBinaryFile}, \hyperpage{9}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {BST}, \hyperpage{6}
+
+  \indexspace
+
+  \item {destroyTree}
+    \subitem {BST}, \hyperpage{6}
+  \item {display}
+    \subitem {BST}, \hyperpage{6}
+
+  \indexspace
+
+  \item {findPath}
+    \subitem {BST}, \hyperpage{7}
+
+  \indexspace
+
+  \item {loadFromBinaryFile}
+    \subitem {BSTFileManager}, \hyperpage{8}
+  \item {loadFromTextFile}
+    \subitem {BSTFileManager}, \hyperpage{8}
+
+  \indexspace
+
+  \item {remove}
+    \subitem {BST}, \hyperpage{7}
+
+  \indexspace
+
+  \item {saveToBinaryFile}
+    \subitem {BSTFileManager}, \hyperpage{9}
+
+\end{theindex}

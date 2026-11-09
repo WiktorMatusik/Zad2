@@ -1,0 +1,46 @@
+\doxysection{BST.\+h}
+\hypertarget{_b_s_t_8h_source}{}\label{_b_s_t_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }BST\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::set<int>\ treeData;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ data;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ Node*\ left;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Node*\ right;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Node(\textcolor{keywordtype}{int}\ val)\ :\ data(val),\ left(\textcolor{keyword}{nullptr}),\ right(\textcolor{keyword}{nullptr})\ \{\}}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ Node*\ buildBalancedTree(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}*\ arr,\ \textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ end)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ printPreorder(Node*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ printInorder(Node*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ printPostorder(Node*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ printGraphical(Node*\ node,\ \textcolor{keywordtype}{int}\ space)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ BST();}
+\DoxyCodeLine{00031\ \ \ \ \ \string~BST();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_a485f8cb43aed2f9dfca0a567b7d84c95}{add}}(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_b_s_t_aefc696db4ac313445e484b815c59cd42}{remove}}(\textcolor{keywordtype}{int}\ val);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_aa131064b9b8165893fe655d3fcecf075}{display}}(\textcolor{keywordtype}{int}\ method)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_b_s_t_a4d81ad6255a266137ebb36ae3af7431f}{findPath}}(\textcolor{keywordtype}{int}\ target,\ std::vector<int>\&\ path)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_ab3f23c9fc94f151bfc1473900f8a744b}{destroyTree}}(Node*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::set<int>\&\ getData()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ treeData;\ \}}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
